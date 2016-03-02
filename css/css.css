@@ -12,8 +12,8 @@ html{
 }
 
 @font-face {
-    font-family:"Myriad Pro Light";
-    src: url(../font/MyriadPro-Light.otf);
+	font-family:"Myriad Pro Light";
+	src: url(../font/MyriadPro-Light.otf);
 }
 
 body{
@@ -31,7 +31,7 @@ ul,li{
 }
 
 section{
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	width: 100%;
 	height: 100vh;
 	display: flex;
@@ -42,6 +42,7 @@ section{
 
 .header{
 	align-items: center;
+	text-align: center;
 }
 section .containerBis{
 	/*border: 1px solid blue;*/
@@ -59,12 +60,26 @@ h1,h2,h4,h5{
 h2{
 	font-size: 4vw;
 	margin: 0 0 1em;
-	background-color: rgb(48, 60, 86);
-	color: white;
+	/*background-color: rgb(48, 60, 86);*/
+	color: rgb(48, 60, 86);
+	width: 35%;
 }
 
-h4{
-	margin: 2em 0 1em;
+.title{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+}
+
+span{
+	width: 30%;
+	border: 3px solid rgb(48, 60, 86);
+	height: 0;
+}
+
+span p{
+	visibility: hidden;
 }
 
 div .infos{
@@ -92,10 +107,14 @@ div .infos{
 	display: block;
 }
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-							missions
+missions
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+.missions h4{
+		margin: 2em 0 0 ;
+}
 .containerBis .bloc{
-	border: 1px solid black;
+	border: 1px solid white;
 	width: 33%;
 	flex-grow: 1;
 	height: 35vh;
@@ -107,6 +126,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 .containerBis #barometre{
 	width: 66%;
 	flex-grow: 2;
+	border-right: none;
 }
 
 #barometre article{
@@ -117,63 +137,99 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 .bloc article p{
 	width: 60%;
-	margin: 2em auto;
+	margin: 1em auto;
+}
+
+.bloc article{
+	color: white;
+	height: 100%;
+	background-color: rgba(217,48 ,44 , 0.6);
 }
 
 #barometre article p{
 	width: 100%;
 }
+
+#detection, #barometre,#promotion,#selection,#accompagnement{
+	position: relative;
+}
+
+#detection img, #barometre img,#promotion img,#selection img,#accompagnement img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: .7;
+}
+
+
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-							rejoignez-nous
+rejoignez-nous
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 .containerBis h1 img{
 	width: 70%;
 	height: auto;
 	/*border: 1px solid grey;*/
 }
+
+.ecosysteme .containerBis img{
+	margin: 3em auto;
+}
+
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-							contact
+engagements
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-.contact{
+.engagements .containerBis div{
+	/*border: 1px solid red;*/
 	display: flex;
 	flex-flow: wrap;
-	justify-content: center;
-	/*border: 1px solid grey;*/
+}
+
+.pour_le_territoire,.porteurs_de_projet,.le_centsept{
+	width: 25%;
+	text-align: justify;
+	/*border: 1px solid rgb(48, 60, 86);*/
+}
+
+.back-territoire,.back-projet,.back-centsept{
 	width: 100%;
-}
-.adresse,.map{
-	/*border: 1px solid grey;*/
-	height: 70vh;
-}
-.contact .map{
-	width: 65%;
+	height: 40vh;
+	/*border: 1px solid rgb(48, 60, 86);*/
 }
 
-.contact .adresse{
-	width: 30%;
-	background-color: grey;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+.back-territoire{
+	background-image: url("../img/tree.jpg");
+	background-size: cover;
 }
 
-.adresse img{
-	width: 32px;
-	height: 32px;
+.back-projet{
+	background-image: url("../img/projet.jpg");
+	background-size: cover;
 }
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-							engagements
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-.engagements h5{
+
+.porteurs_de_projet ul li{
+	margin: .5em 0;
+}
+
+.porteurs_de_projet h4{
+	margin-top: 1em;
+}
+
+.back-centsept{
+	background-image: url("../img/back107.jpg");
+	background-size: cover;
+}
+/*.engagements h5{
 	text-align: left;
 	margin: 1em 0;
 }
 
 .engagements li{
 	margin: 1em 0;
-}
+}*/
+
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-							nous connaitre
+nous connaitre
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 .connaitre .containerBis{
 	/*border: 1px solid blue;*/
@@ -227,10 +283,41 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 	/*border: 1px solid green;*/
 }
 
- .partenaires .institutionnels{
+.partenaires .institutionnels{
 	width: 75%;
 }
 
 .partenaires .prives{
- width: 20%;
+	width: 20%;
+}
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+contact
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+.contact{
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	/*border: 1px solid grey;*/
+	width: 90%;
+}
+.adresse,.map{
+	/*border: 1px solid grey;*/
+	height: 70vh;
+}
+.contact .map{
+	width: 65%;
+}
+
+.contact .adresse{
+	width: 30%;
+	background-color: grey;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.adresse img{
+	width: 32px;
+	height: 32px;
 }
