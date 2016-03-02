@@ -18,6 +18,7 @@ html{
 
 body{
 	font-family:Myriad Pro Light, sans-serif;
+	font-size: 1.1em;
 }
 
 ul,li{
@@ -25,7 +26,9 @@ ul,li{
 	padding: 0;
 	margin: 0;
 }
-
+a{
+	text-decoration: none;
+}
 .container{
 	width: 100%;
 }
@@ -68,7 +71,7 @@ h2{
 .title{
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: baseline;
 }
 
@@ -180,15 +183,18 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 engagements
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 .engagements .containerBis div{
-	/*border: 1px solid red;*/
 	display: flex;
 	flex-flow: wrap;
 }
 
-.pour_le_territoire,.porteurs_de_projet,.le_centsept{
+.engagements span{
 	width: 25%;
+}
+
+.pour_le_territoire,.porteurs_de_projet,.le_centsept,.engagements ul{
+	width: 28%;
 	text-align: justify;
-	/*border: 1px solid rgb(48, 60, 86);*/
+	margin-bottom: 2em;
 }
 
 .back-territoire,.back-projet,.back-centsept{
@@ -207,26 +213,38 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 	background-size: cover;
 }
 
-.porteurs_de_projet ul li{
+ .ul_projet li,.ul_centsept li,.ul_territoire li{
 	margin: .5em 0;
-}
-
-.porteurs_de_projet h4{
-	margin-top: 1em;
 }
 
 .back-centsept{
 	background-image: url("../img/back107.jpg");
 	background-size: cover;
 }
-/*.engagements h5{
-	text-align: left;
-	margin: 1em 0;
+
+.pour_le_territoire{
+	order: 1;
 }
 
-.engagements li{
-	margin: 1em 0;
-}*/
+.porteurs_de_projet{
+	order: 2;
+}
+
+.le_centsept{
+	order:3;
+}
+
+.ul_territoire{
+	order: 4;
+}
+
+.ul_projet{
+	order: 5;
+}
+
+.ul_centsept{
+	order: 6;
+}
 
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 nous connaitre
@@ -234,36 +252,38 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 .connaitre .containerBis{
 	/*border: 1px solid blue;*/
 	background-color: rgb(48, 60, 86);
-
 	color: white;
+}
+
+.connaitre .containerBis div{
+	/*margin: .8em 0;*/
+}
+
+.connaitre .title{
+		background-color: white;
+		margin: 0;
 }
 .connaitre h2{
 	background-color: white;
 	color: rgb(48, 60, 86);
-	width: 100%;
-	margin: .5em;
+	margin-bottom: 1em;
 }
 
-
-
 .connaitre h3{
+	font-size: 1.5em;
 	background-color: white;
 	color: rgb(48, 60, 86);
 	width: 100%;
-	/*text-decoration: underline;*/
-	/*border: 1px solid green;*/
+	padding: .5em 0;
 	text-align: center;
-}
-
-.connaitre .containerBis div{
-	margin: .8em 0;
 }
 
 .containerBis .territoire,.containerBis .acteurs,.containerBis .partenaires,.partenaires .prives,.partenaires .institutionnels{
 	display: flex;
 	flex-flow: wrap;
-	align-items: center;
+	align-items:center;
 	justify-content: space-around;
+	/*margin: .8em 0 ;*/
 	/*background-color: red;*/
 }
 
