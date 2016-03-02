@@ -11,9 +11,13 @@ html{
 	box-sizing: inherit;
 }
 
+@font-face {
+    font-family:"Myriad Pro Light";
+    src: url(../font/MyriadPro-Light.otf);
+}
+
 body{
-	font-family: 'Ubuntu Condensed', sans-serif;
-	height: 100%;
+	font-family:Myriad Pro Light, sans-serif;
 }
 
 ul,li{
@@ -26,38 +30,37 @@ ul,li{
 	width: 100%;
 }
 
-.red{
-	color: red;
-}
-
 section{
-	/*border: 1px solid red;*/
+	border: 1px solid red;
 	width: 100%;
 	height: 100vh;
 	display: flex;
-	align-items: center;
+	flex-flow: wrap;
+	align-items: flex-start;
 	justify-content: center;
 }
 
+.header{
+	align-items: center;
+}
 section .containerBis{
 	/*border: 1px solid blue;*/
 	display: flex;
 	flex-flow: wrap;
-	justify-content: center;
+	justify-content: space-around;
 	width: 90%;
 }
 
-h1,h2,h3,h4{
+h1,h2,h4,h5{
 	width:100%;
 	text-align: center;
 }
 
-h1{
-	font-size:15vw;
-}
-
 h2{
-	font-size: 8vw;
+	font-size: 4vw;
+	margin: 0 0 1em;
+	background-color: rgb(48, 60, 86);
+	color: white;
 }
 
 h4{
@@ -88,19 +91,21 @@ div .infos{
 .menu:hover .barmenu{
 	display: block;
 }
-
-.containerBis div{
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+							missions
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+.containerBis .bloc{
 	border: 1px solid black;
 	width: 33%;
 	flex-grow: 1;
-	height: 40vh;
+	height: 35vh;
 	text-align: center;
 	display: flex;
 	align-items: baseline;
 }
 
 .containerBis #barometre{
-	width: 60%;
+	width: 66%;
 	flex-grow: 2;
 }
 
@@ -118,13 +123,17 @@ div .infos{
 #barometre article p{
 	width: 100%;
 }
-
-.containerBis img{
-	width: 50%;
-	height: 50%;
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+							rejoignez-nous
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+.containerBis h1 img{
+	width: 70%;
+	height: auto;
 	/*border: 1px solid grey;*/
 }
-
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+							contact
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 .contact{
 	display: flex;
 	flex-flow: wrap;
@@ -151,4 +160,77 @@ div .infos{
 .adresse img{
 	width: 32px;
 	height: 32px;
+}
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+							engagements
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+.engagements h5{
+	text-align: left;
+	margin: 1em 0;
+}
+
+.engagements li{
+	margin: 1em 0;
+}
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+							nous connaitre
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+.connaitre .containerBis{
+	/*border: 1px solid blue;*/
+	background-color: rgb(48, 60, 86);
+
+	color: white;
+}
+.connaitre h2{
+	background-color: white;
+	color: rgb(48, 60, 86);
+	width: 100%;
+	margin: .5em;
+}
+
+
+
+.connaitre h3{
+	background-color: white;
+	color: rgb(48, 60, 86);
+	width: 100%;
+	/*text-decoration: underline;*/
+	/*border: 1px solid green;*/
+	text-align: center;
+}
+
+.connaitre .containerBis div{
+	margin: .8em 0;
+}
+
+.containerBis .territoire,.containerBis .acteurs,.containerBis .partenaires,.partenaires .prives,.partenaires .institutionnels{
+	display: flex;
+	flex-flow: wrap;
+	align-items: center;
+	justify-content: space-around;
+	/*background-color: red;*/
+}
+
+
+.territoire div, .prives div,.institutionnels div{
+	width: 100px;
+	height: auto;
+}
+
+.territoire img, .partenaires img{
+	width: 100%;
+	height: 100%;
+}
+
+.containerBis .partenaires,.containerBis .territoire{
+	width: 100%;
+	/*border: 1px solid green;*/
+}
+
+ .partenaires .institutionnels{
+	width: 75%;
+}
+
+.partenaires .prives{
+ width: 20%;
 }
