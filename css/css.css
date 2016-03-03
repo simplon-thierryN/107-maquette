@@ -19,10 +19,11 @@ html{
 body{
 	font-family:Myriad Pro Light, sans-serif;
 	font-size: 1.1em;
+	color: rgb(48, 60, 86);
 }
 
 ul,li{
-	list-style: none;
+	/*list-style: none;*/
 	padding: 0;
 	margin: 0;
 }
@@ -93,7 +94,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 	margin: 1em;
 	display: flex;
 	align-items: center;
-	background-color: rgba(0,0,0,0.7);
+	/*background-color: rgba(0,0,0,0.7);*/
 }
 
 .btn_menu h3,.btn_menu img{
@@ -104,7 +105,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 	width: 20%;
 	height: 100vh;
 	opacity: .9;
-	background-color: #303030;
+	/*background-color: #303030;*/
 	display: none;
 }
 
@@ -135,6 +136,11 @@ div .infos{
 	height: auto;
 	/*border: 1px solid grey;*/
 }
+
+.header a{
+	font-weight: bolder;
+	color: rgb(217,45,44);
+}
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ecosysteme
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
@@ -145,7 +151,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 missions
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 .missions h4{
-	margin: 2em 0 0 ;
+	margin: 1em 0 0 ;
+	font-size: 1.2em;
+	font-weight: bold;
 }
 .containerBis .bloc{
 	border: 1px solid white;
